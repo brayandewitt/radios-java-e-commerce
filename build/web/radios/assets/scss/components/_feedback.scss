@@ -1,0 +1,60 @@
+// feedback
+.feedback {
+    &__slider {
+        padding-bottom: 7px;
+    }
+    &__content {
+        text-align: center;
+        span {
+            font-size: 12px;
+
+        }
+        h4 {
+            font-size: 16px;
+        }
+    }
+    &__img {
+        overflow: hidden;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        img {
+            width: 35px;
+            height: 35px;
+            padding: 2px;
+            @include border-radius(50%);
+            background-color: var(--color-white);
+            box-shadow: 0px 4px 10px rgba(30, 52, 94, 0.07);
+        }
+    }
+    &__nav {
+        max-width: 150px;
+        margin: auto;
+        margin-top: 30px;
+        .slick-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            @include transform(translateY(-50%));
+            background-color: transparent;
+            @include border-radius(50%);
+            z-index: 1;
+            color: #BEB9B9;
+            cursor: pointer;
+            &:hover {
+                color: #FF1B1B;
+            }
+            &.slick-next {
+                left: auto;
+                right: -20px;
+            }
+        }
+    }
+    &__nav .slick-center img {
+        @include transform(scale(1.4));
+    }
+}

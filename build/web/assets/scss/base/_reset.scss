@@ -1,0 +1,97 @@
+/* reset css start */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  position: relative;
+  line-height: 29px;
+  color: var(--color-default);
+  background-color: var(--color-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+button {
+  cursor: pointer;
+}
+
+*:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  @include transition(.3s);
+}
+
+button:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  @include transition(.3s);
+  &:hover {
+    color: inherit;
+  }
+}
+select {
+	height: 55px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: url(../img/icon/select-arrow.png);
+	background-position: calc(100% - 10px) 50%;
+	background-repeat: no-repeat;
+	padding-right: 20px;
+  background-color: transparent;
+  border: 0;
+}
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], form select, textarea {
+	width: 100%;
+	height: 55px;
+	border: 2px solid #f4f4f4;
+	border-radius: 0;
+	padding: 0 20px;
+	transition: .3s;
+	-webkit-transition: .3s;
+	-moz-transition: .3s;
+	-ms-transition: .3s;
+	-o-transition: .3s;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+form select:focus, 
+textarea:focus {
+	border-color: var(--color-primary);
+}
+button {
+  border: 0;
+}
+// span
+//   display: inline-block
+table {
+  width: 100%;
+}
+
+p, li, span {
+  color: var(--color-default);
+  margin-bottom: 0;
+}
+
+/* reset css end */

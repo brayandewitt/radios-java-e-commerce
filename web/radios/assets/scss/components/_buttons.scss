@@ -1,0 +1,131 @@
+.thm-btn {
+    font-size: 15px;
+	padding: 15px 30px;
+    padding-right: 52px;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff;
+    background: var(--color-primary);
+    display: inline-block;
+    line-height: 1.3;
+    @include transition(0.3s);
+    @include border-radius(2px);
+    overflow: hidden;
+    position: relative;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include border-radius(53px);
+    @include respond(lg) {
+        padding: 17px 28px;
+        padding-right: 50px;
+    }
+    i {
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        @include transform(translateY(-50%));
+        color: #fff;
+        font-size: 13px;
+        transition: all .3s ease;
+    }
+    &:hover {
+        i {
+            right: 28px;
+        }
+        .btn-wrap span {
+            &:nth-child(1) {
+                @include transform(translateY(-150%));
+            }
+            &:nth-child(2) {
+                top: 50%;
+                @include transform(translateY(-50%));
+            }
+        }
+    }
+    &__black {
+        background-color: var(--color-black);
+    }
+    &__red {
+        background-color: var(--color-red);
+    }
+    
+    &__md {
+        padding: 11px 23px 13px;
+        font-size: 12px;
+    }
+    &.br-0 {
+        @include border-radius(0);
+    }
+    &.br-1 {
+        @include border-radius(1px);
+    }
+    &.fs-12 {
+        font-size: 12px;
+    }
+    &.fs-14 {
+        font-size: 14px;
+    }
+    &.no-icon {
+        padding: 15px 30px;
+    }
+    .btn-wrap {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        span {
+            color: var(--color-white);
+            @include transition(all .3s ease);
+            &:nth-child(1) {
+                display: block;
+                position: relative;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                top: 100%;
+                display: block;
+            }
+        }
+    }
+    &__transparent {
+        background-color: transparent;
+        border: 1px solid var(--color-primary);
+        .btn-wrap span {
+            color: var(--color-primary);
+        }
+        i {
+            color: var(--color-primary);
+        }
+        &:hover {
+            background-color: var(--color-primary);
+            .btn-wrap span {
+                color: var(--color-white);
+            }
+            i {
+                color: var(--color-white);
+            }
+        }
+    }
+}
+
+.btns {
+    a {
+        margin-right: 30px;
+        margin-top: 20px;
+        &:last-child {
+            margin-right: 0;
+        }
+        @include respond(md) {
+            margin-right: 20px;
+        }
+    }
+}
+.view-cart-btn, .cookie-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    padding: 0 35px;
+}

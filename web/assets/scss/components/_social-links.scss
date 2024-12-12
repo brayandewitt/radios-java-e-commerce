@@ -1,0 +1,18 @@
+/* social link */
+.social-links {
+    a {
+        border-radius: 4px;
+        font-size: 15px;
+        text-align: center;
+        color: var(--color-black);
+        text-decoration: none;
+        @include border-radius(50%);
+        &:not(:last-child){
+            margin-right: 10px;
+        }
+        &:hover {
+            border-color: var(--color-white);
+            color: var(--color-black);
+        }
+    }
+}

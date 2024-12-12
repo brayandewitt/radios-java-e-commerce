@@ -1,0 +1,42 @@
+/* breadcrumb css */
+.breadcrumb-area {
+    padding: 30px 0;
+}
+.radios-breadcrumb {
+    ul {
+        margin-bottom: 0px;
+        flex-wrap: wrap;
+    }
+    li {
+        font-size: 16px;
+        position: relative;
+        @include respond(xs) {
+            font-size: 14px;
+        }
+        &:not(:last-child) {
+            margin-right: 26px;
+            &::after {
+                @include after;
+                content: "\f105";
+                width: auto;
+                height: auto;
+                left: auto;
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 400;
+                right: -17px;
+                top: 2px;
+                color: #706C6C;
+                font-size: 13px;
+            }
+        }
+        a {
+            span {
+                color: #706C6C;
+            }
+            text-decoration: none;
+        }
+        span {
+            color: var(--color-primary);
+        }
+    }
+}

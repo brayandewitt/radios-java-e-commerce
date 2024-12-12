@@ -1,0 +1,54 @@
+.account {
+    &__wrap {
+        &.pr-60 {
+            @include respond(laptop) {
+                padding-right: 30px;
+            }
+            @include respond(lg) {
+                padding-right: 0px;
+            }
+        }
+        &.pl-60 {
+            @include respond(laptop) {
+                padding-left: 30px;
+            }
+            @include respond(lg) {
+                padding-left: 0px;
+            }
+        }
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 500;
+        color: var(--color-black);
+        margin-bottom: 20px;
+    }
+    &__input-field {
+        margin-bottom: 28px;
+        input {
+            border-width: 1px;
+            border-color: #E0E0E0;
+        }
+        label {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--color-black);
+            margin-bottom: 10px;
+        }
+        .form-check-label {
+            font-size: 15px;
+            font-weight: 400;
+            color: #474645;
+            @include transform(translateY(-3px));
+            a {
+                color: var(--color-primary);
+            }
+        }
+    }
+    &__btn {
+        .thm-btn {
+            padding: 13px 30px;
+            font-size: 16px;
+        }
+    }
+}

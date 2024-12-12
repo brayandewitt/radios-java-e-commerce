@@ -1,0 +1,45 @@
+/*----------------------------------------*/
+/*  13. 404
+/*----------------------------------------*/
+.error {
+    &__text {
+        h1 {
+            font-size: 340px;
+            color: rgba(60, 58, 70, 0.14);
+            line-height: 1;
+            @include respond(laptop) {
+                font-size: 300px;
+            }
+            @include respond(lg) {
+                font-size: 250px;
+            }
+            @include respond(md) {
+                font-size: 200px;
+            }
+            @include respond(xs) {
+                font-size: 120px;
+            }
+        }
+        h3 {
+            font-size: 55px;
+            margin-bottom: 30px;
+            @include respond(lg) {
+                font-size: 40px;
+            }
+            @include respond(md) {
+                font-size: 30px;
+            }
+            @include respond(xs) {
+                font-size: 22px;
+            }
+        }
+        p {
+            font-size: 18px;
+        }
+    }
+}
+.go-back-btn {
+    .thm-btn {
+        @include border-radius(2px);
+    }
+}

@@ -1,0 +1,129 @@
+// category nav
+.category-nav {
+    position: relative;
+    width: 243px;
+    margin-right: 24px;
+    @include respond(lg) {
+        display: none;
+    }
+    &__list {
+        background-color: var(--color-white);
+        border: 1px solid #E5E5E5;
+        box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        @include border-radius(3px);
+        padding: 10px 0;
+        padding-bottom: 13px;
+        li {
+            position: relative;
+            padding: 0 20px;
+            a {
+                color: var(--color-default);
+                font-size: 14px;
+                padding: 12px 0;
+                display: block;
+                img {
+                    margin-right: 15px;
+                    width: 22px;
+                }
+            }
+            &:hover > ul {
+                left: calc(100% + 1px);
+                opacity: 1;
+                visibility: visible;
+                pointer-events: unset;
+            }
+        }
+    }
+}
+.category-nav > ul ul {
+	position: absolute;
+	left: 98%;
+	right: auto;
+	top: 0;
+	width: 226px;
+	background: var(--color-white);
+	z-index: 1;
+	padding: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	pointer-events: none;
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    z-index: 2;
+}
+.category-nav > ul ul li a {
+    padding: 5px 0;
+}
+.category-nav > ul > li:hover > ul {
+	left: calc(100% + 1px);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: unset;
+}
+.category-nav > ul > li > a {
+	position: relative;
+}
+.category-nav > ul > li.menu-item-has-children > a::before {
+	content: "\f105";
+	font-family: "Font Awesome 5 Pro";
+	font-weight: 400;
+	font-size: 12px;
+	font-size: calc-rem-value(8);
+	position: absolute;
+	right: -7px;
+	top: 13px;
+	-webkit-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+// category
+.category {
+    &__slide {
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            @include transform(translateY(-50%));
+            color: #103178;
+            font-size: 16px;
+            cursor: pointer;
+            &.slick-next {
+                left: auto;
+                right: -20px;
+            }
+        }
+    }
+    &__item {
+        margin: 0 15px;
+    }
+    &__icon {
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        margin-bottom: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include transition(.3s);
+    }
+    &__item:hover &__icon {
+        @include transform(scale(1.07));
+    }
+    &__title {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: #55595E;
+    }
+}
+.vertical-menu-list {
+	position: absolute;
+	top: 56px;
+	left: 0;
+	z-index: 3;
+}

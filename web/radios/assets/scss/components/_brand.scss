@@ -1,0 +1,13 @@
+// brand
+.brand {
+    &__item {
+        padding: 0 35px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        min-height: 60px;
+        @include respond(lg) {
+            padding: 0 20px;
+        }
+    }
+}

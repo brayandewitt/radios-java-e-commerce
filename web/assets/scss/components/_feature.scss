@@ -1,0 +1,100 @@
+.feature {
+    &__wrap {
+        justify-content: center;
+    }
+    &__item {
+        border: 1px solid var(--color-border);
+        padding: 30px 18px;
+        width: 20%;
+        margin-top: -1px;
+        margin-right: -1px;
+        @include respond(lg) {
+            width: 30%;
+        }
+        @include respond(md) {
+            width: 40%;
+        }
+        @include respond(xs) {
+            width: 100%;
+        }
+        .icon {
+            width: 40px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content {
+            width: calc(100% -60px);
+            h3 {
+                font-size: 17px;
+                font-weight: 500;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &.style-2 {
+            .icon {
+                &::before {
+                    background-color: #EAF5E1;
+                }
+            }
+        }
+    }
+    &__wrap-two {
+        background-color: var(--color-white);
+        border: 1px solid var(--color-border);
+        @include border-radius(5px);
+        .feature__item {
+            border: 0;
+            margin: 0;
+            position: relative;
+            width: 25%;
+            @include respond(md) {
+                width: 50%;
+                &:nth-child(2)::before {
+                    display: none;
+                }
+            }
+            @include respond(xs) {
+                width: 100%;
+                &::before {
+                    display: none;
+                }
+            }
+            &::before {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                @include transform(translateY(-50%));
+                width: 1px;
+                height: 58px;
+                content: "";
+                background-color: var(--color-border);
+            }
+            &:last-child::before {
+                display: none;
+            }
+            .icon::before {
+                display: none;
+            }
+        }
+    }
+    &__line {
+        position: relative;
+        z-index: 1;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: var(--color-border);
+            height: 1px;
+            content: "";
+            @include transform(translateY(-50%));
+            z-index: -1;
+        }
+    }
+}
